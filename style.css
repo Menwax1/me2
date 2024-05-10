@@ -78,9 +78,14 @@ img {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#sidebyside {
-    float: right; 
-    
+#sidebysideright {
+    float: left;
+}
+
+
+
+#flaotsidebysideleft {
+    float: right;
 }
 
 
