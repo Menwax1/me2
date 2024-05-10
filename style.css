@@ -77,3 +77,7 @@ img {
     font-size: large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#sidebyside {
+    float: right;
+}
