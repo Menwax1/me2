@@ -20,8 +20,11 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: crimson; 
     text-align: center;
-    
- }
+    background-color: rgb(255, 247, 133);
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
 
 h1 {
     color: rgb(250, 160, 87); 
@@ -67,4 +70,10 @@ img {
 
 #game75 {
     position:relative ;
+}
+
+#Backect {
+    text-align: left;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
