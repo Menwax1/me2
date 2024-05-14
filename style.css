@@ -1,24 +1,24 @@
 h2 {
-   color: rgb(116, 1, 1); 
-   /* text-align: center; */
+    color: rgb(116, 1, 1);
+    /* text-align: center; */
 
 }
 
 h4 {
-    color: lightcoral; 
+    color: lightcoral;
     /* text-align: center; */
-    
- }
+
+}
 
 a {
-    color: lightcoral; 
+    color: lightcoral;
     /* text-align: center; */
-    
- }
+
+}
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: crimson; 
+    color: crimson;
     text-align: center;
     background-color: rgb(255, 247, 133);
     border: 0px;
@@ -27,18 +27,18 @@ body {
 }
 
 h1 {
-    color: rgb(250, 160, 87); 
-    text-align:left;
+    color: rgb(250, 160, 87);
+    text-align: left;
     font-size: xxx-large;
- }
+}
 
- #game {
+#game {
     display: inline-block
 }
 
 #name {
     #font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(255, 105, 105);
     text-align: left;
 }
@@ -64,12 +64,10 @@ img {
     border-radius: 10px
 }
 
-#Rgame {
-
-}
+#Rgame {}
 
 #game75 {
-    position:relative ;
+    position: relative;
 }
 
 #Backect {
@@ -100,4 +98,19 @@ img {
 
 #picturetitle {
     text-align: left;
+}
+
+.img1n2 {
+    display: flex;
+    justify-content: ;
+}
+
+.img1 {
+    z-index: 1;
+}
+
+.img2 {
+    position: absolute;
+    z-index: 2;
+    top: 52.5%;
 }
