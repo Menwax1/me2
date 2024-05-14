@@ -88,6 +88,13 @@ img {
     float: right;
 }
 
+#randoright {
+    float: right;
+    text-align: left;
+}
 
-
+#randoleft {
+    float: left;
+    text-align: left;
+}
 
