@@ -69,25 +69,29 @@
                 <a id="game75" href="switch.html"><img src="SWITCH.png" alt="" height="55"></a>
                 <a id="game75" href="waves.html"><img src="waves.png" alt="" height="55"></a>
                 <a id="game75" href="waves.html"><img src="leveleaten.png" alt="" height="55"></a>
-
-                <div class="img1n2">
-                    <a id="Rgame" href="PIXELJUMP.html"><img class="img1" src="PixelJump.png" alt="" width="75"></a>
-                    <img class="img2" src="trending.png" width="70">
-                </div>
                 <div class="parent">
-
-                    <img class="image1" src="Flip3D.png" alt="" height="30"></a>
-                    <img class="image2" src="trending.png" alt="" height="30"></a>
+                    <img src="leveleaten.png" alt="Original Image" height="10"/>
+                    <div class="overlay">
+                        <img src="trending.png" alt="Overlay Image" height="5" />
+                    </div>
                 </div>
-            </ul>
-        </div>
-    </div>
-    <div id="randoright">
-        <h2 id="title">List:</h2>
-        <a id="Rgame" href="FruitGames.html"><img src="FruitGames.png" alt="" height="30"></a>
-        <br>
-        <a id="Rgame" href="Constant.html"><img src="FruitGames(1).png" alt="" height="30"></a>
-    </div>
+                <style>
+                    .parent {
+                        position: relative;
+                        width: 300px;
+                        /* Set the desired width */
+                        height: 200px;
+                        /* Set the desired height */
+                    }
+
+                    .overlay {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        z-index: 1; /* Ensure overlay is above the original image */
+                    }
+                </style>
+
 </body>
 
 </html>
