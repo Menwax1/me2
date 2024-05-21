@@ -118,3 +118,22 @@ img {
     z-index: 2;
     top: 52.5%;
 }
+
+.under {
+    /* position: absolute; */
+    /* left: 0px; */
+    /* top: 0px; */
+    /* z-index: -1; */
+    z-index: 1;
+    position: relative; 
+  }
+  
+  .over {
+    z-index: 2;
+    position: relative;
+    left: -110px;
+    /* position: absolute; */
+    /* left: 40px; */
+    /* top: 10px; */
+    /* z-index: -1; */
+  }
