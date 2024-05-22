@@ -25,6 +25,17 @@
             position: relative;
         }
 
+        .home-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff9900;
+            color: #ffffff;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 16px;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #1a1a1a;
@@ -68,7 +79,6 @@
             color: #ffffff;
             text-align: center;
         }
-
         .game-container {
             max-width: 600px;
             margin: 0 auto;
@@ -77,16 +87,13 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
-
         .scratch-embed {
             width: 100%;
             height: 400px;
         }
-
         .category-buttons {
             margin-top: 20px;
         }
-
         .category-button {
             display: inline-block;
             margin: 0 10px;
@@ -96,21 +103,22 @@
             text-decoration: none;
             border-radius: 5px;
         }
-
         .fighting-icon::before {
-            content: "\1F94A";
-            /* Fighting game icon (emoji) */
-            margin-right: 5px;
-        }
-
-        .Sparkles-icon::before {
-            content: "\2728";
-            /* Sparkles emoji (✨) */
+            content: "\1F94A"; /* Fighting game icon (emoji) */
             margin-right: 5px;
         }
         .continuous-icon::before {
             content: "\1F3AE"; /* Continuous game icon (emoji) */
             margin-right: 5px;
+        }
+        .Sparkles-icon::before {
+            content: "\2728"; /* Sparkles emoji (✨) */
+            margin-right: 5px;
+        }
+        .home-icon::before {
+            content: "\1F3E0";
+            /* Unicode character for house emoji */
+            font-size: 20px;
         }
     </style>
 </head>
@@ -120,13 +128,17 @@
 
     <body>
         <img src="1-removebg-preview.png" width="150" alt="">
+        <a href="index.html" class="home-button">
+            <div class="home-icon"></div>
+        </a>
+        <div class="container">
         <div class="gallery">
             <div class="gallery-item" style="display: inline-block;">
                 <div class="container">
-                    <a id="game75" href="LevelEaten.html">
-                        <img src="leveleaten.png" alt="LevelEaten">
+                    <a id="game75" href="Flappy.html">
+                        <img src="Flappy.png" alt="LevelEaten">
                     </a>
-                    <h3>Level Eaten</h3>
+                    <h3>Flappy Collection</h3>
                     <div class="trending-icon">🔥</div> <!-- Add the trending icon here -->
                 </div>
             </div>
@@ -152,16 +164,16 @@
             </div>
 
             <div class="gallery-item">
-                <a id="game76" href="TankByte.html">
-                    <img src="TankByte.png" alt="Another Game">
+                <a id="game76" href="WatermelonMerge.html">
+                    <img src="Watermelon Merge.png" alt="Another Game">
                 </a>
-                <h3>Tank Byte</h3>
+                <h3>Watermelon Drop</h3>
             </div>
 
-
-
+        
+            
             <div class="game-container">
-
+                
                 <div class="category-buttons">
                     <a class="category-button" href="#">
                         <span class="fighting-icon"></span>Fighting Games
@@ -169,8 +181,6 @@
                     <a class="category-button" href="#">
                         <span class="Sparkles-icon"></span>Original Games
                     </a>
-                    <a class="category-button" href="#">
-                        <span class="continuous-icon"></span>Continuous Games
                     </a>
                 </div>
             </div>

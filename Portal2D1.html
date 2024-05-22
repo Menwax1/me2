@@ -14,8 +14,7 @@
             height: 100vh;
         }
 
-        .trending-icon,
-        .home-icon {
+        .trending-icon {
             position: absolute;
             top: 10px;
             right: 10px;
@@ -27,21 +26,21 @@
             z-index: 1;
         }
 
+        .home-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff9900;
+            color: #ffffff;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 16px;
+        }
+
         .home-icon::before {
             content: "\1F3E0";
             /* Unicode character for house emoji */
             font-size: 20px;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        .ScratchGame {
-            float: 
         }
 
         .game-container {
@@ -54,7 +53,8 @@
         }
 
         .scratch-embed {
-            width: 50%; /* Adjust the width of the embedded Scratch project */
+            width: 50%;
+            /* Adjust the width of the embedded Scratch project */
             height: 400px;
         }
 
@@ -71,10 +71,46 @@
             /* Adjust the size as needed */
             margin: 10px;
         }
-                /* Add this style to make the home icon clickable */
-                .home-button {
+
+        /* Add this style to make the home icon clickable */
+        .home-button {
             cursor: pointer;
             /* Add any other button styles you'd like */
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+        }
+        .gallery-item {
+            max-width: 300px;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            /* Add cursor style to indicate interactivity */
+        }
+
+        .gallery-item h3 {
+            margin: 0;
+            padding: 10px;
+            background-color: #333;
         }
     </style>
 </head>
@@ -82,36 +118,35 @@
 <body>
     </head>
     <div class="container">
-        <img src="portal2d.png" alt="Portal2D" width="60">
-        
         <a href="index2.html" class="home-button">
             <div class="home-icon"></div>
         </a>
     </div>
-        <div class="game-container">
-            <div class="small-image">
-                <img src="" alt="Image 1">
-            </div>
-            <div class="small-image">
-                <img src="image2.jpg" alt="Image 2">
-            </div>
-            <!-- Add more small images here -->
+        <div class="gallery-item">
+            <a id="game76" href="Fruit.html">
+                <img src="Ninja-slice.png" alt="Another Game">
+            </a>
+            <h3>Fruit Ninja</h3>
         </div>
-        <div class="ScratchGame" style="overflow: hidden; height: 480px; width: 640px;">
-            <iframe style="margin-top: -50px; margin-left: -11px; border: none;" allowtransparency="false" width="658"
-                height="536" src="https://scratch.mit.edu/projects/900903656/embed"></iframe>
+        <!-- Add more gallery items here -->
+    </div>
+        <!-- Add more small images here -->
+    </div>
+    <div class="ScratchGame" style="overflow: hidden; height: 480px; width: 640px;">
+        <iframe style="margin-top: -50px; margin-left: -11px; border: none;" allowtransparency="false" width="658"
+            height="536" src="https://scratch.mit.edu/projects/900903656/embed"></iframe>
+    </div>
+    <a href="game1.html">Game 1</a>
+    <a href="game2.html">Game 2</a>
+    <!-- Add more game links here -->
+    </div>
+    </div>
+    <div class="game-container">
+        <div class="more-games">
+            <a href="game1.html">Game 1</a>
+            <a href="game2.html">Game 2</a>
+            <!-- Add more game links here -->
         </div>
-        <a href="game1.html">Game 1</a>
-        <a href="game2.html">Game 2</a>
-        <!-- Add more game links here -->
-        </div>
-        </div>
-        <div class="game-container">
-            <div class="more-games">
-                <a href="game1.html">Game 1</a>
-                <a href="game2.html">Game 2</a>
-                <!-- Add more game links here -->
-            </div>
-    </body>
+</body>
 
 </html>
