@@ -8,6 +8,10 @@
     <style>
         .container {
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .trending-icon,
@@ -36,6 +40,10 @@
             text-align: center;
         }
 
+        .ScratchGame {
+            float: 
+        }
+
         .game-container {
             max-width: 600px;
             margin: 0 auto;
@@ -46,26 +54,12 @@
         }
 
         .scratch-embed {
-            width: 100%;
+            width: 50%; /* Adjust the width of the embedded Scratch project */
             height: 400px;
         }
 
         .more-games {
             margin-top: 20px;
-        }
-
-        .more-games a {
-            display: block;
-            margin-bottom: 10px;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .more-games {
-            margin-top: 20px;
-        }
-
-        .more-games a {
             display: block;
             margin-bottom: 10px;
             color: #ffffff;
@@ -88,8 +82,8 @@
 <body>
     </head>
     <div class="container">
-        <img src="your-image.jpg" alt="Your Image">
-        <div class="trending-icon">Icon</div>
+        <img src="portal2d.png" alt="Portal2D" width="60">
+        
         <a href="index2.html" class="home-button">
             <div class="home-icon"></div>
         </a>
@@ -103,7 +97,7 @@
             </div>
             <!-- Add more small images here -->
         </div>
-        <div style="overflow: hidden; height: 480px; width: 640px;">
+        <div class="ScratchGame" style="overflow: hidden; height: 480px; width: 640px;">
             <iframe style="margin-top: -50px; margin-left: -11px; border: none;" allowtransparency="false" width="658"
                 height="536" src="https://scratch.mit.edu/projects/900903656/embed"></iframe>
         </div>
