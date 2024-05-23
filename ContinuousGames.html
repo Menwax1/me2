@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game-Style Picture Gallery</title>
+    <title>ME2 - ContinuousGames</title>
     <style>
         /* ... Your existing styles ... */
         .trending-icon {
@@ -120,6 +120,16 @@
             /* Unicode character for house emoji */
             font-size: 20px;
         } 
+        .home-button :hover {
+            background-color: rgb(255, 220, 155);
+            font-size: 60px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .home-button:hover .home-icon::before {
+            font-size: 40px; /* Increase the font size on hover */
+        }
     </style>
 </head>
 
@@ -144,12 +154,6 @@
             </div>
         </div>
         <div class="gallery">
-            <div class="gallery-item">
-                <a href="Portal2D1.html">
-                    <img src="portal2d.png" alt="Portal 2D">
-                </a>
-                <h3>Portal 2D</h3>
-            </div>
             <div class="gallery-item">
                 <a id="game76" href="Fruit.html">
                     <img src="Ninja-slice.png" alt="Another Game">
