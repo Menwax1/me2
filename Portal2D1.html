@@ -30,7 +30,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            background-color: #ff9900;
+            background-color: #ffffff;
             color: #ffffff;
             padding: 5px;
             border-radius: 50%;
@@ -85,15 +85,22 @@
             gap: 20px;
             padding: 20px;
         }
-        
+
         body {
             font-family: Arial, sans-serif;
             background-color: #1a1a1a;
             color: #ffffff;
             text-align: center;
         }
+        .ScratchGame {
+            border: 2px solid black;
+            margin: auto;
+            padding: 10px;
+        }
+        
+
         .gallery-item {
-            max-width: 300px;
+            max-width: 150px;
             border: 2px solid #ffffff;
             border-radius: 10px;
             overflow: hidden;
@@ -112,6 +119,27 @@
             padding: 10px;
             background-color: #333;
         }
+        .game-container {
+            display: flex;
+            align-items: center; /* Vertically center the content */
+            border: 2px solid rgb(255, 253, 253); /* Add a border around the container */
+            padding: 10px; /* Add some padding for spacing */
+        }
+        
+        .game-container {
+            display: flex;
+            align-items: center; /* Vertically center the content */
+            border: 2px solid rgb(255, 255, 255); /* Add a border around the container */
+            padding: 10px; /* Add some padding for spacing */
+        }
+        
+        .game-image {
+            margin-right: 10px; /* Add spacing between image and details */
+        }
+        
+        .game-details {
+            flex-grow: 1; /* Allow details to take remaining space */
+        }
     </style>
 </head>
 
@@ -122,31 +150,44 @@
             <div class="home-icon"></div>
         </a>
     </div>
-        <div class="gallery-item">
-            <a id="game76" href="Fruit.html">
-                <img src="Ninja-slice.png" alt="Another Game">
-            </a>
-            <h3>Fruit Ninja</h3>
-        </div>
-        <!-- Add more gallery items here -->
+    <div class="gallery-item">
+        <a id="game76" href="Fruit.html">
+            <img src="Ninja-slice.png" alt="Another Game">
+        </a>
+        <h3>Fruit Ninja</h3>
     </div>
-        <!-- Add more small images here -->
+    <div class="gallery-item">
+        <a id="game76" href="Fruit.html">
+            <img src="Ninja-slice.png" alt="Another Game">
+        </a>
+        <h3>Fruit Ninja</h3>
     </div>
-    <div class="ScratchGame" style="overflow: hidden; height: 480px; width: 640px;">
-        <iframe style="margin-top: -50px; margin-left: -11px; border: none;" allowtransparency="false" width="658"
-            height="536" src="https://scratch.mit.edu/projects/900903656/embed"></iframe>
+    <!-- Add more gallery items here -->
     </div>
-    <a href="game1.html">Game 1</a>
-    <a href="game2.html">Game 2</a>
-    <!-- Add more game links here -->
-    </div>
-    </div>
+    <!-- Add more small images here -->
+
     <div class="game-container">
-        <div class="more-games">
-            <a href="game1.html">Game 1</a>
-            <a href="game2.html">Game 2</a>
-            <!-- Add more game links here -->
+        <div class="game-image">
+            <img src="portal2d.png" width="150" alt="Portal 2D">
         </div>
+        <div class="game-details">
+            <h3>Portal 2D</h3>
+            <p>By: T.Creeper</p>
+            <!-- Embed the Scratch game here -->
+            <div class="ScratchGame" style="overflow: hidden; height: 480px; width: 640px;">
+                <iframe style="border: none;" allowtransparency="false" width="658" height="536"
+                    src="https://scratch.mit.edu/projects/900903656/embed"></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="gallery-item">
+        <a id="game76" href="Fruit.html">
+            <img src="Ninja-slice.png" alt="Another Game">
+        </a>
+        <h3>Fruit Ninja</h3>
+    </div>
+
 </body>
 
 </html>
