@@ -121,6 +121,31 @@
             margin-right: 5px;
             /* Other styles as needed */
         }
+        .image-container :hover {
+            width: 200px;
+            height: 200px;
+        }
+        .image-container {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease; /* Add a smooth transition effect */
+        }
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+        .static-image {
+            width: 150px;
+        }
+        
+        .static-image:hover {
+            content: url("portal.gif.gif");
+        }
     </style>
 </head>
 
@@ -128,7 +153,9 @@
     </head>
 
     <body>
-        <img src="1-removebg-preview.png" width="150" alt="">
+        <div class="image-container">
+            <img id="dynamic-image" src="1-removebg-preview.png" alt="Default Image">
+        </div>
         <div class="gallery">
             <div class="gallery-item" style="display: inline-block;">
                 <div class="container">
@@ -142,7 +169,7 @@
             </div>
             <div class="gallery-item">
                 <a href="Portal2D1.html">
-                    <img src="portal2d.png" alt="Portal 2D">
+                    <img class="static-image"  src="portal2d.png" alt="Portal 2D">
                 </a>
                 <h3>Portal 2D</h3>
             </div>
@@ -195,6 +222,21 @@
                     </a>
                 </div>
             </div>
+            <script>
+                const imageElement = document.getElementById('dynamic-image');
+                const defaultImageSrc = '1-removebg-preview.png';
+                const hoverImageSrc = 'logo2.png'; // Replace with your hover image filename
+        
+                // Change image on hover
+                imageElement.addEventListener('mouseenter', () => {
+                    imageElement.src = hoverImageSrc;
+                });
+        
+                // Revert to default image when mouse leaves
+                imageElement.addEventListener('mouseleave', () => {
+                    imageElement.src = defaultImageSrc;
+                });
+            </script>
     </body>
 
 </html>
