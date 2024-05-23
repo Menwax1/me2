@@ -11,7 +11,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            /* height: 100vh; */
         }
 
         .trending-icon {
@@ -34,7 +34,6 @@
             color: #ffffff;
             padding: 5px;
             border-radius: 50%;
-            font-size: 16px;
         }
 
         .home-icon::before {
@@ -44,7 +43,7 @@
         }
 
         .game-container {
-            max-width: 600px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
             border: 2px solid #ffffff;
@@ -76,8 +75,18 @@
         .home-button {
             cursor: pointer;
             /* Add any other button styles you'd like */
-        }
 
+        }
+        .home-button :hover {
+            background-color: orange;
+            font-size: 60px;
+            width: 100px;
+            height: 100px;
+        }
+        /* .home-icon :hover {
+            background-color: orange;
+            width: 100px;
+        } */
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -92,12 +101,13 @@
             color: #ffffff;
             text-align: center;
         }
+
         .ScratchGame {
             border: 2px solid black;
             margin: auto;
             padding: 10px;
         }
-        
+
 
         .gallery-item {
             max-width: 150px;
@@ -119,26 +129,34 @@
             padding: 10px;
             background-color: #333;
         }
+
         .game-container {
             display: flex;
-            align-items: center; /* Vertically center the content */
-            border: 2px solid rgb(255, 253, 253); /* Add a border around the container */
-            padding: 10px; /* Add some padding for spacing */
+            align-items: center;
+            /* Vertically center the content */
+            border: 2px solid rgb(255, 255, 255);
+            /* Add a border around the container */
+            padding: 10px;
+            /* Add some padding for spacing */
         }
-        
-        .game-container {
-            display: flex;
-            align-items: center; /* Vertically center the content */
-            border: 2px solid rgb(255, 255, 255); /* Add a border around the container */
-            padding: 10px; /* Add some padding for spacing */
-        }
-        
+
         .game-image {
-            margin-right: 10px; /* Add spacing between image and details */
+            margin-right: 10px;
+            /* Add spacing between image and details */
+
         }
-        
+
         .game-details {
-            flex-grow: 1; /* Allow details to take remaining space */
+            flex-grow: 1;
+            /* Allow details to take remaining space */
+        }
+
+        .showcase {
+            float: left;
+        }
+
+        .words {
+            float: right;
         }
     </style>
 </head>
@@ -150,7 +168,7 @@
             <div class="home-icon"></div>
         </a>
     </div>
-    <div class="gallery-item">
+    <!-- <div class="gallery-item">
         <a id="game76" href="Fruit.html">
             <img src="Ninja-slice.png" alt="Another Game">
         </a>
@@ -161,32 +179,38 @@
             <img src="Ninja-slice.png" alt="Another Game">
         </a>
         <h3>Fruit Ninja</h3>
-    </div>
+    </div> -->
     <!-- Add more gallery items here -->
     </div>
     <!-- Add more small images here -->
 
     <div class="game-container">
         <div class="game-image">
-            <img src="portal2d.png" width="150" alt="Portal 2D">
-        </div>
-        <div class="game-details">
-            <h3>Portal 2D</h3>
-            <p>By: T.Creeper</p>
-            <!-- Embed the Scratch game here -->
-            <div class="ScratchGame" style="overflow: hidden; height: 480px; width: 640px;">
-                <iframe style="border: none;" allowtransparency="false" width="658" height="536"
-                    src="https://scratch.mit.edu/projects/900903656/embed"></iframe>
+            <div class="game-image">
+                <div class="game-details">
+                    <div>
+                    <h3>Portal 2D</h3>
+                    <p>By: T.Creeper</p>
+                    </div>
+                    
+                    <div>
+                        <img src="portal2d.png" width="60" alt="Portal 2D">
+                    </div>
+                    <!-- Embed the Scratch game here -->
+                    <div style="overflow: hidden; height: 480px; width: 640px;">
+                        <iframe style="margin-top:-50px; margin-left:-11px;" allowtransparency="false" width="658"
+                            height="536" bgcolor=#220000
+                            src="https://scratch.mit.edu/projects/900903656/embed/"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="gallery-item">
-        <a id="game76" href="Fruit.html">
-            <img src="Ninja-slice.png" alt="Another Game">
-        </a>
-        <h3>Fruit Ninja</h3>
-    </div>
+        <!-- <div class="gallery-item">
+            <a id="game76" href="Fruit.html">
+                <img src="Ninja-slice.png" alt="Another Game">
+            </a>
+            <h3>Fruit Ninja</h3>
+        </div> -->
 
 </body>
 
