@@ -127,31 +127,38 @@
             margin-right: 5px;
             /* Other styles as needed */
         }
+
         .image-container :hover {
             width: 200px;
             height: 200px;
         }
+
         .image-container {
             width: 200px;
             height: 200px;
             overflow: hidden;
         }
+
         .image-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease; /* Add a smooth transition effect */
+            transition: transform 0.3s ease;
+            /* Add a smooth transition effect */
         }
+
         .image-container:hover img {
             transform: scale(1.1);
         }
+
         .static-image {
             width: 150px;
         }
-        
+
         .static-image:hover {
             content: url("portal.gif.gif");
         }
+
         .static-image-level-eaten:hover {
             content: url("levelE.gif.gif");
         }
@@ -163,13 +170,29 @@
         .static-imageTankByte:hover {
             content: url("Tankbyte.gif.gif");
         }
+
         .static-image-2048:hover {
             content: url("2048.gif.gif");
         }
+
         .static-imagemario:hover {
             content: url("Mario.gif.gif");
         }
 
+        .tooltip::after {
+            content: attr(data-title);
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover::after {
+            opacity: 1;
+        }
+        
     </style>
 </head>
 
@@ -188,18 +211,18 @@
                     </a>
                     <h3>Level Eaten</h3>
                     <div class="trending-icon">🔥</div> <!-- Add the trending icon here -->
-                
+
                 </div>
             </div>
             <div class="gallery-item">
                 <a href="portal2d.html">
-                    <img class="static-image"  src="portal2d.png" alt="Portal 2D">
+                    <img class="static-image" src="portal2d.png" alt="Portal 2D">
                 </a>
                 <h3>Portal 2D</h3>
             </div>
             <div class="gallery-item">
                 <a href="Mario.html">
-                    <img class="static-imagemario"  src="Screenshot 2024-05-14 130907.png" alt="Portal 2D">
+                    <img class="static-imagemario" src="Screenshot 2024-05-14 130907.png" alt="Portal 2D">
                 </a>
                 <h3>Super Mario 5</h3>
             </div>
@@ -220,6 +243,7 @@
                 </a>
                 <h3>2048</h3>
             </div>
+
             
             <div class="gallery-item">
                 <div class="container">
@@ -230,8 +254,22 @@
                     <div class="trending-icon">🔥</div>
                 </div>
             </div>
-            
-<!-- /* Next thing I want to do here 
+
+            <br>
+
+            <div class="SmallGameIcons">
+                <img src="leveleaten.png" width="75" alt="Level Eaten">
+                <span class="title">Level Eaten</span>
+            </div>
+            <div class="SmallGameIcons">
+                <img src="portal2d.png" width="75" alt="Portal 2D">
+                <span class="title">Portal 2D</span>
+            </div>
+            <a href="" data-title="Your tooltip text" class="tooltip">Link</a>
+
+
+
+            <!-- /* Next thing I want to do here 
     is make many small images of the rest 
     of the games and make nice hover overs*/ -->
             <br>
@@ -273,15 +311,24 @@
             </div>
 
             <script>
+                $('a').hover(function(e) {
+                    const title = $(this).attr('title');
+                    $(this).append('<span>Your tooltip text</span>');
+                    $(this).removeAttr('title');
+                }, function(e) {
+                    $('span', this).remove();
+                    $(this).attr('title', title);
+                });
+                
                 const imageElement = document.getElementById('dynamic-image');
                 const defaultImageSrc = '1-removebg-preview.png';
                 const hoverImageSrc = 'logo2.png'; // Replace with your hover image filename
-        
+
                 // Change image on hover
                 imageElement.addEventListener('mouseenter', () => {
                     imageElement.src = hoverImageSrc;
                 });
-        
+
                 // Revert to default image when mouse leaves
                 imageElement.addEventListener('mouseleave', () => {
                     imageElement.src = defaultImageSrc;
