@@ -61,6 +61,7 @@
             padding: 10px;
             background-color: #333;
         }
+
         .small-gallery-item {
             max-width: 150px;
             border: 2px solid #ffffff;
@@ -209,10 +210,10 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
+
         .tooltip:hover::after {
             opacity: 1;
         }
-        
     </style>
 </head>
 
@@ -227,7 +228,7 @@
             <div class="gallery-item" style="display: inline-block;">
                 <div class="container">
                     <a class="static-image-level-eaten" href="adLevelEaten.html">
-                        <img src="leveleaten.png" alt="LevelEaten">
+                        <img src="LevelEaten (2).png" alt="LevelEaten">
                     </a>
                     <h3>Level Eaten</h3>
                     <div class="trending-icon">🔥</div> <!-- Add the trending icon here -->
@@ -236,7 +237,7 @@
             </div>
             <div class="gallery-item">
                 <a href="portal2d.html">
-                    <img class="static-image" src="portal2d.png" alt="Portal 2D">
+                    <img class="static-image" src="Portal2d (2).png" alt="Portal 2D">
                 </a>
                 <h3>Portal 2D</h3>
             </div>
@@ -252,36 +253,39 @@
 
             <div class="gallery-item">
                 <a id="game76" href="Fruit.html">
-                    <img class="static-imageFruitNinja" src="Ninja-slice.png" alt="Another Game">
+                    <img class="static-imageFruitNinja" src="14.png" alt="Another Game">
                 </a>
                 <h3>Fruit Ninja</h3>
             </div>
 
             <div class="gallery-item">
                 <a id="game76" href="2048.html">
-                    <img class="static-image-2048" src="Screenshot 2024-05-22 171009 - Copy.png" alt="Another Game">
+                    <img class="static-image-2048" src="2048 (2).png" alt="Another Game">
                 </a>
                 <h3>2048</h3>
             </div>
 
-            
+
             <div class="gallery-item">
                 <div class="container">
                     <a id="game76" href="TankByte.html">
-                        <img class="static-imageTankByte" src="TankByte.png" alt="Another Game">
+                        <img class="static-imageTankByte" src="20.png" alt="Another Game">
                     </a>
                     <h3>Tank Byte</h3>
                     <div class="trending-icon">🔥</div>
                 </div>
             </div>
             <br>
-            <div class="gallery-item">
-                <div class="container">
-                    <a id="game76" href="StickmanHook.html">
-                        <img class="static-imageStickmanHook" src="Hook.avif" alt="Another Game">
-                    </a>
-                    <h3>Stickman Hook</h3>
-                    <div class="trending-icon">🔥</div>
+            <br>
+            <div>
+                <div class="gallery-item">
+                    <div class="container">
+                        <a id="game76" href="StickmanHook.html">
+                            <img class="static-imageStickmanHook" src="ernet.png" alt="Another Game">
+                        </a>
+                        <h3>Stickman Hook</h3>
+                        <div class="trending-icon">🔥</div>
+                    </div>
                 </div>
             </div>
             <br>
@@ -358,15 +362,15 @@
             </div>
 
             <script>
-                $('a').hover(function(e) {
+                $('a').hover(function (e) {
                     const title = $(this).attr('title');
                     $(this).append('<span>Your tooltip text</span>');
                     $(this).removeAttr('title');
-                }, function(e) {
+                }, function (e) {
                     $('span', this).remove();
                     $(this).attr('title', title);
                 });
-                
+
                 const imageElement = document.getElementById('dynamic-image');
                 const defaultImageSrc = '1-removebg-preview.png';
                 const hoverImageSrc = 'logo2.png'; // Replace with your hover image filename
