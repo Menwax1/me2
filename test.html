@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style the play button */
+        .play-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Add hover effect */
+        .play-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Center the container */
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Clicking the button triggers the startGame() function -->
+        <button class="play-button" onclick="startGame()">Play Game</button>
+
+        <!-- Replace the link below with your actual Scratch project URL -->
+        <iframe id="scratch-iframe" src="https://scratch.mit.edu/projects/
+        https://scratch.mit.edu/projects/900903656/embed" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        // Function to trigger the green flag (start the Scratch game)
+        function startGame() {
+            // Replace the link below with your actual Scratch project URL
+            var iframe = document.getElementById("scratch-iframe");
+            iframe.contentWindow.postMessage({ method: "greenFlag" }, "*");
+        }
+    </script>
+</body>
+</html>

@@ -158,6 +158,37 @@
         .words {
             float: right;
         }
+        .play-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Add hover effect */
+        .play-button:hover {
+            background-color: #2980b9;
+        }
+                /* Style the play button */
+                .play-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Add hover effect */
+        .play-button:hover {
+            background-color: #2980b9;
+        }
     </style>
 </head>
 
@@ -199,17 +230,45 @@
                     <div style="overflow: hidden; height: 480px; width: 640px;">
                         <iframe style="margin-top:-50px; margin-left:-11px;" allowtransparency="false" width="658"
                             height="536" bgcolor=#220000
-                            src="https://scratch.mit.edu/projects/900903656/embed/"></iframe>
-                    </div>
+                            src="https://scratch.mit.edu/projects/900903656/embed/" target="_blank" class="play-button">Play Game></iframe>
+                            <button class="play-button" onclick="startGame()">Play Game</button>
+                        </div>
                 </div>
             </div>
         </div>
+        <div style="position: relative; padding-top: 75%;">
+            <figure>
+                <iframe style="position: absolute; top: 0; left: 0; height: 100%; width: 100%;" src="https://scratch.mit.edu/projects/900903656/embed" frameborder="0" allowfullscreen scrolling="no"></iframe>
+            </figure>
+        </div>
+        
         <!-- <div class="gallery-item">
             <a id="game76" href="Fruit.html">
                 <img src="Ninja-slice.png" alt="Another Game">
             </a>
             <h3>Fruit Ninja</h3>
         </div> -->
+
+        <button onclick="launchFullScreen(document.getElementById('myScratchProject'))">Click for Fullscreen</button>
+<iframe id="myScratchProject" src="https://scratch.mit.edu/projects/PROJECT_ID/embed" frameborder="0"></iframe>
+
+<script>
+    function launchFullScreen(element) {
+        if (element.requestFullScreen) {
+            element.requestFullScreen();
+        } else if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullScreen) {
+            element.webkitRequestFullScreen();
+        }
+    }
+
+        // Function to trigger the green flag (start the Scratch game)
+        function startGame() {
+            // Replace the link below with your actual Scratch project URL
+            window.open("https://scratch.mit.edu/projects/PROJECT_ID/embed", "_blank");
+        }
+</script>
 
 </body>
 
