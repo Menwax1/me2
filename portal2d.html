@@ -199,7 +199,21 @@
             <div class="home-icon"></div>
         </a>
 
-    <div class="game-container">
+        <script >
+            function full_screen() {
+                game = document.getElementById("game")
+                console.log()
+                game.style = " width: 100vw; height: 100vh; margin-top:-50px; margin-left:-11px;"
+                
+                //document.appendChild(game)
+                // document.removeChild
+                document.getElementById("containers").replaceWith(game);
+                
+             //   document.rootElement.appendChild(game)
+                
+            }
+        </script>
+    <div id="containers" class="game-container">
         <div class="game-image">
             <div class="game-image">
                 <div class="game-details">
@@ -213,14 +227,14 @@
                     </div>
                     <!-- Embed the Scratch game here -->
                     <div style="overflow: hidden; height: 480px; width: 640px;">
-                        <iframe style="margin-top:-50px; margin-left:-11px;" allowtransparency="false" width="658"
+                        <iframe id="game" style="margin-top:-50px; margin-left:-11px;" allowtransparency="false" width="658"
                             height="536" bgcolor=#220000
                             src="https://scratch.mit.edu/projects/900903656/embed/" target="_blank" class="play-button">Play Game></iframe>
-                            <button class="play-button" onclick="startGame()">Play Game</button>
                         </div>
                 </div>
             </div>
         </div>
+        <button onclick="full_screen()">full</button>
 
 </body>
 
