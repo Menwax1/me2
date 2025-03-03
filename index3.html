@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Game Hub</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #374785, #24305e);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column; /* Ensures proper layout stacking */
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: #24305e;
+            border-bottom: 4px solid #374785;
+            position: sticky;
+            top: 0; /* Makes the header always visible */
+            z-index: 3; /* Ensures it stays above all other elements */
+        }
+        header img {
+            height: 60px;
+        }
+        header h1 {
+            margin: 0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 120px; /* Push below the header */
+            left: 0;
+            width: 80px;
+            background-color: #374785;
+            height: calc(100% - 120px); /* Adjust height to fit below header */
+            padding: 15px 10px;
+            transition: width 0.3s;
+            overflow: hidden;
+            z-index: 2; /* Keeps it below the header */
+        }
+
+        .sidebar:hover {
+            width: 200px;
+        }
+
+        .sidebar .options {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .sidebar h3,
+        .sidebar a {
+            margin-top: 20px;
+            color: #ffffff;
+            transition: opacity 0.3s;
+            opacity: 0;
+            white-space: nowrap;
+        }
+
+        .sidebar:hover h3,
+        .sidebar:hover a {
+            opacity: 1;
+        }
+
+        /* Featured Games Section */
+        .featured-section {
+            position: relative;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2a2d43;
+            border-radius: 15px;
+            width: 80%;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-left: auto; /* Centers content properly */
+            margin-right: auto;
+        }
+
+        .featured-slide {
+            display: none;
+            text-align: center;
+            transition: opacity 0.5s ease;
+        }
+
+        .featured-slide img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .featured-slide.active {
+            display: block;
+        }
+
+        .navigation-arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+
+        .arrow {
+            pointer-events: all;
+            font-size: 2em;
+            cursor: pointer;
+            color: #f9a828;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .arrow:hover {
+            background-color: #f9a828;
+            color: #2a2d43;
+        }
+
+        /* Catalog Section */
+        .catalog {
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #2a2d43;
+            border-radius: 8px;
+            width: 80%; /* Aligns with featured-section */
+        }
+
+        .catalog h3 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .game-item {
+            background-color: #374785;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .game-item:hover {
+            transform: scale(1.1); /* Expand on hover */
+        }
+
+        .game-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .game-item img:hover {
+            content: url("hover-image.gif"); /* Temporary GIF on hover */
+        }
+
+        .game-item a {
+            text-decoration: none;
+            color: #f76c6c;
+            font-weight: bold;
+        }
+
+        .game-item a:hover {
+            color: #f9a828;
+        }
+        .catalog-image {
+    transition: transform 0.3s, opacity 0.3s;
+    border-radius: 8px;
+}
+
+.catalog-image:hover {
+    transform: scale(1.1); /* Expand on hover */
+}
+.featured-image {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.featured-image:hover {
+    transform: scale(1.1); /* Expand on hover */
+}
+
+.trending-icon {
+            display: inline;
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            background-color: #ff9900;
+            color: #ffffff;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 16px;
+            /* Add the following line to prevent the icon from overlapping the image */
+            z-index: 1;
+        }
+        .gif-leveleaten {
+            content: url("LevelEaten.gif");
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Game Hub Logo">
+        <h1>Me2 Game Center</h1>
+    </header>
+    <div class="sidebar">
+        <div class="options">☰</div>
+        <h3>Quick Links</h3>
+        <a href="games.html">All Games</a>
+        <a href="about.html">About Us</a>
+        <a href="index.html">Back to Home</a>
+    </div>
+    <div class="featured-section">
+        <div class="featured-slide active">
+            <h2>LevelEaten</h2>
+            <img src="LevelEaten (2).png" alt="Game 1" class="featured-image" data-gif="featured1.gif">
+            <a href="leveleaten3.html"></a>
+        </div>
+        <div class="featured-slide">
+            <h2>Game 2</h2>
+            <img src="TankByte.png" alt="Game 2" class="featured-image" data-gif="featured2.gif">
+        </div>
+        <div class="featured-slide">
+            <h2>Game 3</h2>
+            <img src="Meek.png" alt="Game 3" class="featured-image" data-gif="featured3.gif">
+        </div>
+        <div class="navigation-arrows">
+            <span class="arrow" id="prev">❮</span>
+            <span class="arrow" id="next">❯</span>
+        </div>
+    </div>
+    
+    </div>
+    <div class="catalog">
+        <h3>Game Catalog</h3>
+        <div class="catalog-grid">
+            <div class="game-item">
+                <img src="leveleaten.png" alt="Game 1">
+                <a href="game1.html">Game 1</a>
+            </div>
+            <div class="catalog-grid">
+                <div class="game-item">
+                    <a id="game76" href="leveleaten3.html">
+                        <img class="gif-leveleaten" src="LevelEaten (2).png" alt="Another Game">
+                    </a>
+                    <div class="trending-icon">🔥</div>
+                </div>
+            </div>
+            <div class="game-item">
+                <img src="game2.jpg" alt="Game 2">
+                <a href="game2.html">Game 2</a>
+            </div>
+            <div class="game-item">
+                <img src="game3.jpg" alt="Game 3">
+                <a href="game3.html">Game 3</a>
+            </div>
+            <div class="game-item">
+                <img src="game4.jpg" alt="Game 4">
+                <a href="game4.html">Game 4</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript for GIF Hover
+document.querySelectorAll('.catalog-image').forEach(image => {
+    const originalSrc = image.src;
+    const gifSrc = image.getAttribute('data-gif');
+
+    image.addEventListener('mouseenter', () => {
+        image.src = gifSrc; // Switch to GIF on hover
+    });
+
+    image.addEventListener('mouseleave', () => {
+        image.src = originalSrc; // Revert back to original image
+    });
+});
+
+        // JavaScript for Automatic and Manual Slide Switching
+        const slides = document.querySelectorAll(".featured-slide");
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+        let currentIndex = 0;
+
+        // Function to Show Slide
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index);
+            });
+        }
+
+        // Automatic Slide Switch (Every 5 Seconds)
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }, 5000);
+
+        // Manual Navigation
+        prev.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        next.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        });
+        // JavaScript for GIF Hover in Featured Games
+document.querySelectorAll('.featured-image').forEach(image => {
+    const originalSrc = image.src;
+    const gifSrc = image.getAttribute('data-gif');
+
+    image.addEventListener('mouseenter', () => {
+        image.src = gifSrc; // Switch to GIF on hover
+    });
+
+    image.addEventListener('mouseleave', () => {
+        image.src = originalSrc; // Revert back to original image
+    });
+});
+
+    </script>
+</body>
+</html>

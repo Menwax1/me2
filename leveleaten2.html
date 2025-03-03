@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Eaten - Game Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+            color: #fff;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #222;
+            border-bottom: 4px solid #555;
+        }
+        header img {
+            height: 60px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .main-content {
+            display: flex;
+            margin: 20px;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+            color: #fff;
+        }
+        .sidebar a {
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .sidebar a:hover {
+            color: #00c3ff;
+        }
+        .game-section {
+            flex: 1;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .catalog {
+            margin: 20px;
+            padding: 10px;
+            background-color: #555;
+            border-radius: 8px;
+        }
+        .catalog h3 {
+            text-align: center;
+        }
+        .catalog .game-item {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+        .catalog img {
+            display: block;
+            max-width: 100px;
+            max-height: 100px;
+            margin: 0 auto;
+        }
+        .catalog a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .catalog a:hover {
+            color: #00c3ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Game Hub Logo" />
+        <h1>Level Eaten</h1>
+    </header>
+    <div class="main-content">
+        <div class="sidebar">
+            <h3>Web Table of Contents</h3>
+            <a href="Dodge.html">Dodge Spaceship</a>
+            <a href="index.html">Back to Home</a>
+        </div>
+        <div class="game-section">
+            <h2>Featured Game</h2>
+            <iframe 
+                allowtransparency="false" 
+                width="640" 
+                height="480" 
+                src="https://scratch.mit.edu/projects/704676520/embed/">
+            </iframe>
+        </div>
+    </div>
+    <div class="catalog">
+        <h3>Game Catalog</h3>
+        <div class="game-item">
+            <img src="game1.jpg" alt="Game 1">
+            <a href="game1.html">Game 1</a>
+        </div>
+        <div class="game-item">
+            <img src="game2.jpg" alt="Game 2">
+            <a href="game2.html">Game 2</a>
+        </div>
+        <div class="game-item">
+            <img src="game3.jpg" alt="Game 3">
+            <a href="game3.html">Game 3</a>
+        </div>
+    </div>
+</body>
+</html>

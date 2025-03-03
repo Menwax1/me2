@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Eaten - Game Hub</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #374785, #24305e);
+            color: #ffffff;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: #24305e;
+            border-bottom: 4px solid #374785;
+        }
+        header img {
+            height: 60px;
+        }
+        header h1 {
+            margin: 0;
+        }
+
+        .main-content {
+            display: flex;
+            margin: 20px;
+        }
+        .sidebar {
+    position: fixed;
+    top: 20px; /* Adjust position as needed */
+    left: 0;
+    width: 80px;
+    background-color: #374785;
+    height: 100%;
+    padding: 15px 10px;
+    transition: width 0.3s, z-index 0.3s;
+    overflow: hidden;
+    z-index: 1; /* Keeps it below other elements like the catalog */
+}
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.sidebar .options {
+    font-size: 24px;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Creates '...' if text is too long */
+}
+
+.sidebar h3, .sidebar a {
+    margin-top: 20px;
+    color: #ffffff;
+    transition: opacity 0.3s;
+    opacity: 0; /* Hidden until expanded */
+    white-space: nowrap; /* Prevent wrapping */
+    display: inline-block; /* Keeps structure tidy */
+}
+
+.sidebar:hover h3,
+.sidebar:hover a {
+    opacity: 1; /* Reveals when expanded */
+}
+
+.sidebar {
+    position: fixed;
+    top: 100px; /* Pushes the sidebar below the header */
+    left: 0;
+    width: 80px;
+    background-color: #374785;
+    height: calc(100% - 100px); /* Adjusts height to fit below the header */
+    padding: 15px 10px;
+    transition: width 0.3s;
+    overflow: hidden;
+    z-index: 1; /* Ensure it doesn't cover the catalog */
+}
+
+.catalog {
+    position: relative;
+    z-index: 2; /* Ensures the catalog remains on top of the sidebar */
+}
+
+
+        .game-section {
+            flex: 1;
+            padding: 20px;
+            margin-left: 100px; /* Adjusted for sidebar space */
+            background-color: #2a2d43;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .catalog {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2a2d43;
+            border-radius: 8px;
+        }
+        .catalog h3 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        /* Grid-based Catalog */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .game-item {
+            background-color: #374785;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+        }
+        .game-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .game-item a {
+            text-decoration: none;
+            color: #f76c6c;
+            font-weight: bold;
+        }
+        .game-item a:hover {
+            color: #f9a828;
+        }
+    </style>
+    <script>
+        // Expand/Collapse Sidebar
+        window.addEventListener("load", function() {
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.addEventListener("mouseenter", () => sidebar.style.width = "200px");
+            sidebar.addEventListener("mouseleave", () => sidebar.style.width = "80px");
+        });
+
+        // Redirect to home page when user scrolls to the bottom
+        window.addEventListener("scroll", function() {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                window.location.href = "index.html"; // Redirect to home page
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Game Hub Logo">
+        <h1>Level Eaten</h1>
+    </header>
+    <div class="main-content">
+        <div class="sidebar">
+            <div class="options">☰</div>
+            <h3>Web Table of Contents</h3>
+            <a href="Dodge.html">Dodge Spaceship</a>
+            <a href="index.html">Back to Home</a>
+        </div>
+        <div class="game-section">
+            <h2>Featured Game</h2>
+            <iframe 
+                width="100%" 
+                height="480" 
+                src="https://scratch.mit.edu/projects/704676520/embed/" 
+                style="border: none;">
+            </iframe>
+        </div>
+    </div>
+    <div class="catalog">
+        <h3>Game Catalog</h3>
+        <div class="catalog-grid">
+            <!-- Sample Catalog Items -->
+            <div class="game-item">
+                <img src="game1.jpg" alt="Game 1">
+                <a href="game1.html">Game 1</a>
+            </div>
+            <div class="game-item">
+                <img src="game2.jpg" alt="Game 2">
+                <a href="game2.html">Game 2</a>
+            </div>
+            <div class="game-item">
+                <img src="game3.jpg" alt="Game 3">
+                <a href="game3.html">Game 3</a>
+            </div>
+            <div class="game-item">
+                <img src="game4.jpg" alt="Game 4">
+                <a href="game4.html">Game 4</a>
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+    </div>
+</body>
+</html>
